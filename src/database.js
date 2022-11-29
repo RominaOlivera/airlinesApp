@@ -1,8 +1,8 @@
 require("dotenv")
-const mysql = require("mysql2/promise")
+const { Pool } = require("pg")
 const {DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_DATABASE} = process.env
 
-const pool = mysql.createPool({
+const pool = new Pool({
     user: DB_USER,
     password:DB_PASSWORD,
     host:DB_HOST,
