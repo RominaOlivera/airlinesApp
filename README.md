@@ -32,8 +32,11 @@ For example, this route shows us the first 10 flights.
 In these routes we can obtain the information of one by his ID.
 
 __-GET https://airlinesapp-production.up.railway.app/airlines/1
+
 __-GET https://airlinesapp-production.up.railway.app/airports/1
+
 __-GET https://airlinesapp-production.up.railway.app/flights/1
+
 
 
 ### POST
@@ -55,6 +58,7 @@ __-POST https://airlinesapp-production.up.railway.app/create-airports
 This route allows you to create an airlines.
 The route will respond with a JSON of the following format:
 
+
 {
         "IATA_CODE": "ABE",
         "AIRPORT": "Lehigh Valley International Airport",
@@ -65,6 +69,7 @@ The route will respond with a JSON of the following format:
         "LONGITUDE": "-75.44040",
         
     }
+    
 
 
 __-POST https://airlinesapp-production.up.railway.app/create-flights
