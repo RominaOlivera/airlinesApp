@@ -54,8 +54,9 @@ The route will respond with a JSON of the following format:
 
 ````js
 {
-     "IATA_CODE": "AR",
-     "AIRLINE": "ARGENTINA"
+     "iata_code": "AR",
+     "airline": "ARGENTINA"
+
     }
 ````
 
@@ -71,15 +72,14 @@ The route will respond with a JSON of the following format:
 
 
 ````js
-{
-        "IATA_CODE": "ABE",
-        "AIRPORT": "Lehigh Valley International Airport",
-        "CITY": "Allentown",
-        "STATE": "PA",
-        "COUNTRY": "USA",
-        "LATITUDE": "40.65236",
-        "LONGITUDE": "-75.44040",
-        
+{ 
+        "iata_code": "abe",
+        "airport": "abe Airport",
+        "city": "Allentown",
+        "state": "PA",
+        "country": "USA",
+        "latitude": "40.65236",
+        "longitude": "-75.44040"
     }
   ````  
 
@@ -95,38 +95,37 @@ The route will respond with a JSON of the following format:
 
 ````js
  {
-        "YEAR": "2022",
-        "MONTH": "1",
-        "DAY": "1",
-        "DAY_OF_WEEK": "4",
-        "AIRLINE": "AS",
-        "FLIGHT_NUMBER": "98",
-        "TAIL_NUMBER": "N407AS",
-        "ORIGIN_AIRPORT": "ANC",
-        "DESTINATION_AIRPORT": "SEA",
-        "SCHEDULED_DEPARTURE": "0005",
-        "DEPARTURE_TIME": "2354",
-        "DEPARTURE_DELAY": "-11",
-        "TAXI_OUT": "21",
-        "WHEELS_OFF": "0015",
-        "SCHEDULED_TIME": "205",
-        "ELAPSED_TIME": "194",
-        "AIR_TIME": "169",
-        "DISTANCE": "1448",
-        "WHEELS_ON": "0404",
-        "TAXI_IN": "4",
-        "SCHEDULED_ARRIVAL": "0430",
-        "ARRIVAL_TIME": "0408",
-        "ARRIVAL_DELAY": "-22",
-        "DIVERTED": "0",
-        "CANCELLED": "0",
-        "CANCELLATION_REASON": "",
-        "AIR_SYSTEM_DELAY": "",
-        "SECURITY_DELAY": "",
-        "AIRLINE_DELAY": "",
-        "LATE_AIRCRAFT_DELAY": "",
-        "WEATHER_DELAY": "",
-     
+  "year": "2015",
+        "month": "1",
+        "day": "1",
+        "day_of_week": "4",
+        "airline": "as",
+        "flight_number": "98",
+        "tail_number": "n407as",
+        "origin_airport": "anc",
+        "destination_airport": "sea",
+        "scheduled_departure": "0005",
+        "departure_time": "2354",
+        "departure_delay": "-11",
+        "taxi_out": "21",
+        "wheels_off": "0015",
+        "scheduled_time": "205",
+        "elapsed_time": "194",
+        "air_time": "169",
+        "distance": "1448",
+        "wheels_on": "0404",
+        "taxi_in": "4",
+        "scheduled_arrival": "0430",
+        "arrival_time": "0408",
+        "arrival_delay": "-22",
+        "diverted": "0",
+        "cancelled": "0",
+        "cancellation_reason": "undefined",
+        "air_system_delay": "undefined",
+        "security_delay": "undefined",
+        "airline_delay": "undefined",
+        "late_aircraft_delay": "undefined",
+        "weather_delay": "undefined"
     }
  ```` 
 
