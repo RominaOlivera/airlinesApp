@@ -16,12 +16,15 @@ update, delete and get the data about airports, airlines and flights.
 ### GET 
 
 __- GET https://airlinesapp-production.up.railway.app/airlines
+
 This route allows to obtain the data of all the airlines.
 
 __- GET https://airlinesapp-production.up.railway.app/airports
+
 This route allows obtaining data from all airports.
 
 __- GET https://airlinesapp-production.up.railway.app/flights?limit=10&offset=0
+
 This route obtains all the information of the flights, to consult it we must use LIMIT and OFFSET.
 
 For example, this route shows us the first 10 flights.
