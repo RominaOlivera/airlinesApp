@@ -16,12 +16,15 @@ update, delete and get the data about airports, airlines and flights.
 ### GET 
 
 __- GET https://airlinesapp-production.up.railway.app/airlines
+
 This route allows to obtain the data of all the airlines.
 
 __- GET https://airlinesapp-production.up.railway.app/airports
+
 This route allows obtaining data from all airports.
 
 __- GET https://airlinesapp-production.up.railway.app/flights?limit=10&offset=0
+
 This route obtains all the information of the flights, to consult it we must use LIMIT and OFFSET.
 
 For example, this route shows us the first 10 flights.
@@ -32,29 +35,42 @@ For example, this route shows us the first 10 flights.
 In these routes we can obtain the information of one by his ID.
 
 __-GET https://airlinesapp-production.up.railway.app/airlines/1
+
 __-GET https://airlinesapp-production.up.railway.app/airports/1
+
 __-GET https://airlinesapp-production.up.railway.app/flights/1
+
 
 
 ### POST
 
 __-POST https://airlinesapp-production.up.railway.app/create-airlines
+
 This route allows you to create an airlines.
+
 The route will respond with a JSON of the following format:
 
 
+
+````js
 {
      "IATA_CODE": "AR",
      "AIRLINE": "ARGENTINA"
     }
+````
 
 
 
 
 __-POST https://airlinesapp-production.up.railway.app/create-airports
+
 This route allows you to create an airlines.
 The route will respond with a JSON of the following format:
 
+
+
+
+````js
 {
         "IATA_CODE": "ABE",
         "AIRPORT": "Lehigh Valley International Airport",
@@ -65,12 +81,19 @@ The route will respond with a JSON of the following format:
         "LONGITUDE": "-75.44040",
         
     }
+  ````  
+
 
 
 __-POST https://airlinesapp-production.up.railway.app/create-flights
+
 This route allows you to create an airlines.
 The route will respond with a JSON of the following format:
 
+
+
+
+````js
  {
         "YEAR": "2022",
         "MONTH": "1",
@@ -105,6 +128,8 @@ The route will respond with a JSON of the following format:
         "WEATHER_DELAY": "",
      
     }
+ ```` 
+
 
 
 ### PUT
@@ -112,8 +137,11 @@ The route will respond with a JSON of the following format:
 These routes allow you to change the information we want through your id.
 
 __-PUT https://airlinesapp-production.up.railway.app/update-airlines/1
+
 __-PUT https://airlinesapp-production.up.railway.app/update-airports/1
+
 __-PUT https://airlinesapp-production.up.railway.app/update-flights/1
+
 
 
 
@@ -122,7 +150,9 @@ __-PUT https://airlinesapp-production.up.railway.app/update-flights/1
 These routes allow us to eliminate what we want through its id.
 
 __-DELETE https://airlinesapp-production.up.railway.app/delete-airlines/1
+
 __-DELETE https://airlinesapp-production.up.railway.app/delete-airports/1
+
 __-DELETE https://airlinesapp-production.up.railway.app/delete-flights/1
 
 
