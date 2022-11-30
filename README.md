@@ -42,8 +42,10 @@ __-GET https://airlinesapp-production.up.railway.app/flights/1
 ### POST
 
 __-POST https://airlinesapp-production.up.railway.app/create-airlines
+
 This route allows you to create an airlines.
 The route will respond with a JSON of the following format:
+
 
 
 {
@@ -55,8 +57,10 @@ The route will respond with a JSON of the following format:
 
 
 __-POST https://airlinesapp-production.up.railway.app/create-airports
+
 This route allows you to create an airlines.
 The route will respond with a JSON of the following format:
+
 
 
 {
@@ -73,8 +77,10 @@ The route will respond with a JSON of the following format:
 
 
 __-POST https://airlinesapp-production.up.railway.app/create-flights
+
 This route allows you to create an airlines.
 The route will respond with a JSON of the following format:
+
 
  {
         "YEAR": "2022",
@@ -117,8 +123,11 @@ The route will respond with a JSON of the following format:
 These routes allow you to change the information we want through your id.
 
 __-PUT https://airlinesapp-production.up.railway.app/update-airlines/1
+
 __-PUT https://airlinesapp-production.up.railway.app/update-airports/1
+
 __-PUT https://airlinesapp-production.up.railway.app/update-flights/1
+
 
 
 
@@ -127,7 +136,9 @@ __-PUT https://airlinesapp-production.up.railway.app/update-flights/1
 These routes allow us to eliminate what we want through its id.
 
 __-DELETE https://airlinesapp-production.up.railway.app/delete-airlines/1
+
 __-DELETE https://airlinesapp-production.up.railway.app/delete-airports/1
+
 __-DELETE https://airlinesapp-production.up.railway.app/delete-flights/1
 
 
