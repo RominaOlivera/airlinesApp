@@ -48,12 +48,12 @@ This route allows you to create an airlines.
 The route will respond with a JSON of the following format:
 
 
-
+````js
 {
      "IATA_CODE": "AR",
      "AIRLINE": "ARGENTINA"
     }
-
+````
 
 
 
