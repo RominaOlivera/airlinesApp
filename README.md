@@ -44,6 +44,7 @@ __-GET https://airlinesapp-production.up.railway.app/flights/1
 __-POST https://airlinesapp-production.up.railway.app/create-airlines
 
 This route allows you to create an airlines.
+
 The route will respond with a JSON of the following format:
 
 
