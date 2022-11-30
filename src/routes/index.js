@@ -18,14 +18,14 @@ router.post("/create-airlines", createAirlines)
 router.post("/create-airports", createAirports)
 router.post("/create-flights", createFlights)
 
-router.delete("/delete-airlines/:id", deleteAirlines)
-router.delete("/delete-airports/:id", deleteAirports)
-router.delete("/delete-flights/:id", deleteFlights)
 
 router.put("/update-airlines/:id",updateAirlines)
 router.put("/update-airports/:id",updateAirports)
 router.put("/update-flights/:id",updateFlights)
 
+router.delete("/delete-airlines/:id", deleteAirlines)
+router.delete("/delete-airports/:id", deleteAirports)
+router.delete("/delete-flights/:id", deleteFlights)
 
 
 

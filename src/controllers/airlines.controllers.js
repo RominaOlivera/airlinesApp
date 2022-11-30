@@ -26,12 +26,12 @@ const getFlights = async (req, res) => {
 //POST
 const createAirlines = async (req, res) => {
 
-    const { iata_code, airline } = req.body;
-    const response = await pool.query("INSERT INTO airlines (iata_code, airline) VALUES ($1, $2)", [iata_code, airline]);
+    const { IATA_CODE, AIRLINE } = req.body;
+    const response = await pool.query("INSERT INTO airlines (IATA_CODE, AIRLINE) VALUES ($1, $2)", [IATA_CODE, AIRLINE]);
     res.json({
-        message: "Airline created",
+        message: "AIRLINE created",
         body: {
-            airlines: { iata_code, airline }
+            airlines: { IATA_CODE, AIRLINE }
         }
     })
 
@@ -39,12 +39,12 @@ const createAirlines = async (req, res) => {
 
 const createAirports = async (req, res) => {
 
-    const { iata_code, airport, city, state, country, latitude, longitude } = req.body;
-    const response = await pool.query("INSERT INTO airports (iata_code, airport, city, state, country, latitude, longitude ) VALUES ($1, $2, $3, $4, $5, $6, $7)", [iata_code, airport, city, state, country, latitude, longitude]);
+    const { IATA_CODE, AIRPORT, CITY, STATE, COUNTRY, LATITUDE, LONGITUDE } = req.body;
+    const response = await pool.query("INSERT INTO airports (IATA_CODE, AIRPORT, CITY, STATE, COUNTRY, LATITUDE, LONGITUDE ) VALUES ($1, $2, $3, $4, $5, $6, $7)", [IATA_CODE, AIRPORT, CITY, STATE, COUNTRY, LATITUDE, LONGITUDE]);
     res.json({
-        message: "Airports created",
+        message: "Airport created",
         body: {
-            airports: { iata_code, airport, city, state, country, latitude, longitude }
+            airports: { IATA_CODE, AIRPORT, CITY, STATE, COUNTRY, LATITUDE, LONGITUDE }
         }
     })
 
@@ -53,106 +53,106 @@ const createAirports = async (req, res) => {
 const createFlights = async (req, res) => {
 
     const {
-        year,
-        month,
-        day,
-        day_of_week,
-        airline,
-        flight_number,
-        tail_number,
-        origin_airport,
-        destination_airport,
-        scheduled_departure,
-        departure_time,
-        departure_delay,
-        taxi_out,
-        wheels_off,
-        scheduled_time,
-        elapsed_time,
-        air_time,
-        distance,
-        wheels_on,
-        taxi_in,
-        scheduled_arrival,
-        arrival_time,
-        arrival_delay,
-        diverted,
-        cancelled,
-        cancellation_reason,
-        air_system_delay,
-        security_delay,
-        airline_delaydecimal,
-        late_aircraft_delay,
-        weather_delay } = req.body;
+        YEAR,
+        MONTH,
+        DAY,
+        DAY_OF_WEEK,
+        AIRLINE,
+        FLYGHT_NUMBER,
+        TAIL_NUMBER,
+        ORIGIN_AIRPORT,
+        DESTINATION_AIRPORT,
+        SCHEDULED_DEPARTURE,
+        DEPARTURE_TIME,
+        DEPARTURE_DELAY,
+        TAXI_OUT,
+        WHEELS_OFF,
+        SCHEDULED_TIME,
+        ELAPSED_TIME,
+        AIR_TIME,
+        DISTANCE,
+        WHEELS_ON,
+        TAXI_IN,
+        SCHEDULED_ARRIVAL,
+        ARRIVAL_TIME,
+        ARRIVAL_DELAY,
+        DIVERTED,
+        CANCELLED,
+        CANCELLATION_REASON,
+        AIR_SYSTEM_DELAY,
+        SECURITY_DELAY,
+        AIRLINE_DELAYDECIMAL,
+        LATE_AIRCRAFT_DELAY,
+        WEATHER_DELAY } = req.body;
 
-    const response = await pool.query("INSERT INTO flights (year,month,day,day_of_week,airline,flight_number,tail_number,origin_airport,destination_airport,scheduled_departure,departure_time,departure_delay,taxi_out,wheels_off,scheduled_time,elapsed_time,air_time,distance,wheels_on,taxi_in,scheduled_arrival,arrival_time,arrival_delay,diverted,cancelled,cancellation_reason,air_system_delay,security_delay,airline_delaydecimal,late_aircraft_delay,weather_delay) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27, $28, $29, $30, $31)",
-        [year,
-            month,
-            day,
-            day_of_week,
-            airline,
-            flight_number,
-            tail_number,
-            origin_airport,
-            destination_airport,
-            scheduled_departure,
-            departure_time,
-            departure_delay,
-            taxi_out,
-            wheels_off,
-            scheduled_time,
-            elapsed_time,
-            air_time,
-            distance,
-            wheels_on,
-            taxi_in,
-            scheduled_arrival,
-            arrival_time,
-            arrival_delay,
-            diverted,
-            cancelled,
-            cancellation_reason,
-            air_system_delay,
-            security_delay,
-            airline_delaydecimal,
-            late_aircraft_delay,
-            weather_delay]);
+    const response = await pool.query("INSERT INTO flights (YEAR,MONTH,DAY,DAY_OF_WEEK,AIRLINE,FLYGHT_NUMBER,TAIL_NUMBER,ORIGIN_AIRPORT,DESTINATION_AIRPORT,SCHEDULED_DEPARTURE,DEPARTURE_TIME,DEPARTURE_DELAY,TAXI_OUT,WHEELS_OFF,SCHEDULED_TIME,ELAPSED_TIME,AIR_TIME,DISTANCE,WHEELS_ON,TAXI_IN,SCHEDULED_ARRIVAL,ARRIVAL_TIME,ARRIVAL_DELAY,DIVERTED,CANCELLED,CANCELLATION_REASON,AIR_SYSTEM_DELAY,SECURITY_DELAY,AIRLINE_DELAYDECIMAL,LATE_AIRCRAFT_DELAY,WEATHER_DELAY) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27, $28, $29, $30, $31)",
+        [YEAR,
+            MONTH,
+            DAY,
+            DAY_OF_WEEK,
+            AIRLINE,
+            FLYGHT_NUMBER,
+            TAIL_NUMBER,
+            ORIGIN_AIRPORT,
+            DESTINATION_AIRPORT,
+            SCHEDULED_DEPARTURE,
+            DEPARTURE_TIME,
+            DEPARTURE_DELAY,
+            TAXI_OUT,
+            WHEELS_OFF,
+            SCHEDULED_TIME,
+            ELAPSED_TIME,
+            AIR_TIME,
+            DISTANCE,
+            WHEELS_ON,
+            TAXI_IN,
+            SCHEDULED_ARRIVAL,
+            ARRIVAL_TIME,
+            ARRIVAL_DELAY,
+            DIVERTED,
+            CANCELLED,
+            CANCELLATION_REASON,
+            AIR_SYSTEM_DELAY,
+            SECURITY_DELAY,
+            AIRLINE_DELAYDECIMAL,
+            LATE_AIRCRAFT_DELAY,
+            WEATHER_DELAY]);
 
     res.json({
         message: "Flights added succesfully",
         body: {
             flights: {
-                year,
-                month,
-                day,
-                day_of_week,
-                airline,
-                flight_number,
-                tail_number,
-                origin_airport,
-                destination_airport,
-                scheduled_departure,
-                departure_time,
-                departure_delay,
-                taxi_out,
-                wheels_off,
-                scheduled_time,
-                elapsed_time,
-                air_time,
-                distance,
-                wheels_on,
-                taxi_in,
-                scheduled_arrival,
-                arrival_time,
-                arrival_delay,
-                diverted,
-                cancelled,
-                cancellation_reason,
-                air_system_delay,
-                security_delay,
-                airline_delaydecimal,
-                late_aircraft_delay,
-                weather_delay
+                YEAR,
+                MONTH,
+                DAY,
+                DAY_OF_WEEK,
+                AIRLINE,
+                FLYGHT_NUMBER,
+                TAIL_NUMBER,
+                ORIGIN_AIRPORT,
+                DESTINATION_AIRPORT,
+                SCHEDULED_DEPARTURE,
+                DEPARTURE_TIME,
+                DEPARTURE_DELAY,
+                TAXI_OUT,
+                WHEELS_OFF,
+                SCHEDULED_TIME,
+                ELAPSED_TIME,
+                AIR_TIME,
+                DISTANCE,
+                WHEELS_ON,
+                TAXI_IN,
+                SCHEDULED_ARRIVAL,
+                ARRIVAL_TIME,
+                ARRIVAL_DELAY,
+                DIVERTED,
+                CANCELLED,
+                CANCELLATION_REASON,
+                AIR_SYSTEM_DELAY,
+                SECURITY_DELAY,
+                AIRLINE_DELAYDECIMAL,
+                LATE_AIRCRAFT_DELAY,
+                WEATHER_DELAY
             }
         }
     })
@@ -185,13 +185,13 @@ const getFlightsById = async (req,res) => {
 const deleteAirlines = async (req, res) => {
     const id = req.params.id;
     const response = await pool.query("DELETE FROM airlines WHERE id= $1", [id]);
-    res.json(`Airlines ${id} deleted successffully`)   
+    res.json(`airlines ${id} deleted successffully`)   
 
 }
 const deleteAirports = async (req, res) => {
     const id = req.params.id;
     const response = await pool.query("DELETE FROM airports WHERE id= $1", [id]);
-    res.json(`Airports ${id} deleted successffully`)  
+    res.json(`airports ${id} deleted successffully`)  
 }
 const deleteFlights = async (req, res) => {
     const id = req.params.id;
@@ -205,89 +205,89 @@ const deleteFlights = async (req, res) => {
 
 const updateAirlines = async (req, res) => {
     const id = req.params.id;
-    const { iata_code, airline } = req.body;
-    const response = await pool.query( "UPDATE airlines SET iata_code = $1, airline = $2 WHERE id= $3", [iata_code, airline, id])
+    const { IATA_CODE, AIRLINE } = req.body;
+    const response = await pool.query( "UPDATE airlines SET IATA_CODE = $1, AIRLINE = $2 WHERE id= $3", [IATA_CODE, AIRLINE, id])
 
-    res.send("Airlines updated");
+    res.send("airlines updated");
 }
 
 const updateAirports = async (req, res) => {
     const id = req.params.id;
-    const { iata_code, airport, city, state, country, latitude, longitude } = req.body;  
-    const response = await pool.query("UPDATE airports SET iata_code = $1, airport = $2, city = $3, state = $4, country = $5, latitude = $6, longitude = $7 WHERE id = $8", [iata_code, airport, city, state, country, latitude, longitude, id]);
+    const { IATA_CODE, AIRPORT, CITY, STATE, COUNTRY, LATITUDE, LONGITUDE } = req.body;  
+    const response = await pool.query("UPDATE airports SET IATA_CODE = $1, AIRPORT = $2, CITY = $3, STATE = $4, COUNTRY = $5, LATITUDE = $6, LONGITUDE = $7 WHERE id = $8", [IATA_CODE, AIRPORT, CITY, STATE, COUNTRY, LATITUDE, LONGITUDE, id]);
        
-    res.send("Airports updated")
+    res.send("airports updated")
 
 }
 
 const updateFlights = async (req, res) => {
     const id = req.params.id;
     const {
-        year,
-        month,
-        day,
-        day_of_week,
-        airline,
-        flight_number,
-        tail_number,
-        origin_airport,
-        destination_airport,
-        scheduled_departure,
-        departure_time,
-        departure_delay,
-        taxi_out,
-        wheels_off,
-        scheduled_time,
-        elapsed_time,
-        air_time,
-        distance,
-        wheels_on,
-        taxi_in,
-        scheduled_arrival,
-        arrival_time,
-        arrival_delay,
-        diverted,
-        cancelled,
-        cancellation_reason,
-        air_system_delay,
-        security_delay,
-        airline_delaydecimal,
-        late_aircraft_delay,
-        weather_delay,
+        YEAR,
+        MONTH,
+        DAY,
+        DAY_OF_WEEK,
+        AIRLINE,
+        FLYGHT_NUMBER,
+        TAIL_NUMBER,
+        ORIGIN_AIRPORT,
+        DESTINATION_AIRPORT,
+        SCHEDULED_DEPARTURE,
+        DEPARTURE_TIME,
+        DEPARTURE_DELAY,
+        TAXI_OUT,
+        WHEELS_OFF,
+        SCHEDULED_TIME,
+        ELAPSED_TIME,
+        AIR_TIME,
+        DISTANCE,
+        WHEELS_ON,
+        TAXI_IN,
+        SCHEDULED_ARRIVAL,
+        ARRIVAL_TIME,
+        ARRIVAL_DELAY,
+        DIVERTED,
+        CANCELLED,
+        CANCELLATION_REASON,
+        AIR_SYSTEM_DELAY,
+        SECURITY_DELAY,
+        AIRLINE_DELAYDECIMAL,
+        LATE_AIRCRAFT_DELAY,
+        WEATHER_DELAY,
          } = req.body;
 
-        const response = await pool.query("UPDATE flights SET year = $1, month = $2, day = $3, day_of_week = $4,airline = $5,flight_number = $6, tail_number = $7, origin_airport = $8 , destination_airport = $9, scheduled_departure = $10, departure_time = $11, departure_delay = $12 ,taxi_out = $13 ,wheels_off = $14 ,scheduled_time = $15, elapsed_time = $16, air_time = $17, distance = $18,wheels_on = $19, taxi_in = $20, scheduled_arrival= $21, arrival_time = $22 , arrival_delay = $23 , diverted = $24, cancelled = $25,cancellation_reason = $26, air_system_delay = $27, security_delay = $28, airline_delaydecimal = $29,late_aircraft_delay = $30, weather_delay = $31, id = $32",
-        [year,
-            month,
-            day,
-            day_of_week,
-            airline,
-            flight_number,
-            tail_number,
-            origin_airport,
-            destination_airport,
-            scheduled_departure,
-            departure_time,
-            departure_delay,
-            taxi_out,
-            wheels_off,
-            scheduled_time,
-            elapsed_time,
-            air_time,
-            distance,
-            wheels_on,
-            taxi_in,
-            scheduled_arrival,
-            arrival_time,
-            arrival_delay,
-            diverted,
-            cancelled,
-            cancellation_reason,
-            air_system_delay,
-            security_delay,
-            airline_delaydecimal,
-            late_aircraft_delay,
-            weather_delay,
+        const response = await pool.query("UPDATE flights SET YEAR = $1, MONTH = $2, DAY = $3, DAY_OF_WEEK = $4,AIRLINE = $5,FLYGHT_NUMBER = $6, TAIL_NUMBER = $7, ORIGIN_AIRPORT = $8 , DESTINATION_AIRPORT = $9, SCHEDULED_DEPARTURE = $10, DEPARTURE_TIME = $11, DEPARTURE_DELAY = $12 ,TAXI_OUT = $13 ,WHEELS_OFF = $14 ,SCHEDULED_TIME = $15, ELAPSED_TIME = $16, AIR_TIME = $17, DISTANCE = $18,WHEELS_ON = $19, TAXI_IN = $20, SCHEDULED_ARRIVAL= $21, ARRIVAL_TIME = $22 , ARRIVAL_DELAY = $23 , DIVERTED = $24, CANCELLED = $25,CANCELLATION_REASON = $26, AIR_SYSTEM_DELAY = $27, SECURITY_DELAY = $28, AIRLINE_DELAYDECIMAL = $29,LATE_AIRCRAFT_DELAY = $30, WEATHER_DELAY = $31, id = $32",
+        [YEAR,
+            MONTH,
+            DAY,
+            DAY_OF_WEEK,
+            AIRLINE,
+            FLYGHT_NUMBER,
+            TAIL_NUMBER,
+            ORIGIN_AIRPORT,
+            DESTINATION_AIRPORT,
+            SCHEDULED_DEPARTURE,
+            DEPARTURE_TIME,
+            DEPARTURE_DELAY,
+            TAXI_OUT,
+            WHEELS_OFF,
+            SCHEDULED_TIME,
+            ELAPSED_TIME,
+            AIR_TIME,
+            DISTANCE,
+            WHEELS_ON,
+            TAXI_IN,
+            SCHEDULED_ARRIVAL,
+            ARRIVAL_TIME,
+            ARRIVAL_DELAY,
+            DIVERTED,
+            CANCELLED,
+            CANCELLATION_REASON,
+            AIR_SYSTEM_DELAY,
+            SECURITY_DELAY,
+            AIRLINE_DELAYDECIMAL,
+            LATE_AIRCRAFT_DELAY,
+            WEATHER_DELAY,
              id]);
 
     res.json("Flights updated")
