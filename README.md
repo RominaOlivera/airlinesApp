@@ -48,12 +48,14 @@ This route allows you to create an airlines.
 The route will respond with a JSON of the following format:
 
 
+
 ````js
 {
      "IATA_CODE": "AR",
      "AIRLINE": "ARGENTINA"
     }
 ````
+
 
 
 
@@ -64,6 +66,8 @@ The route will respond with a JSON of the following format:
 
 
 
+
+````js
 {
         "IATA_CODE": "ABE",
         "AIRPORT": "Lehigh Valley International Airport",
@@ -74,7 +78,8 @@ The route will respond with a JSON of the following format:
         "LONGITUDE": "-75.44040",
         
     }
-    
+  ````  
+
 
 
 __-POST https://airlinesapp-production.up.railway.app/create-flights
@@ -83,6 +88,9 @@ This route allows you to create an airlines.
 The route will respond with a JSON of the following format:
 
 
+
+
+````js
  {
         "YEAR": "2022",
         "MONTH": "1",
@@ -117,6 +125,8 @@ The route will respond with a JSON of the following format:
         "WEATHER_DELAY": "",
      
     }
+ ```` 
+
 
 
 ### PUT
